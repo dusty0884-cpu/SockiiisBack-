@@ -1,0 +1,25 @@
+<div style="display: flex; gap: 20px; justify-content: space-between; background-color: #000; padding: 20px;">
+
+  <div style="flex: 1; border: 2px solid #39FF14; padding: 15px; color: #fff;">
+    <h3 style="color: #39FF14;">Our Mission</h3>
+    <p>Doing the Lord's work by supporting:</p>
+    <ul style="list-style-type: none; padding: 0;">
+      <li>1% Service Member Housing</li>
+      <li>1% VA Support / VA Hospitals</li>
+      <li>1% Starving Kids</li>
+      <li>1% Orphans</li>
+      <li>1% Education</li>
+      <li>1% Global 24/7 Workforce Development</li>
+      <li>1% National Security & Disaster Resilience</li>
+    </ul>
+  </div>
+
+  <div style="flex: 1; border: 2px solid #39FF14; padding: 15px; color: #fff;">
+    <h3 style="color: #39FF14;">Idea Box</h3>
+    <p>Share a suggestion to help the program or improve the system:</p>
+    <textarea id="programIdeas" rows="4" style="width: 100%; background: #222; color: #fff; border: 1px solid #39FF14;" placeholder="Type your ideas here..."></textarea>
+    <br><br>
+    <button style="background-color: #39FF14; color: #000; font-weight: bold; border: none; padding: 10px; width: 100%;">Submit Idea</button>
+  </div>
+
+  <div style="flex: 1; border: 2px solid #39FF14; padding:
