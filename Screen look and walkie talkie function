@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SockiiisBack-</title>
+    <style>
+        body {
+            background-color: black;
+            color: #39FF14;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .header {
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #39FF14;
+        }
+        .app-name {
+            font-size: 2.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .job-title {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: white;
+        }
+        .job-description {
+            font-size: 1.2em;
+            max-width: 600px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        /* Walkie Talkie Button */
+        .walkie-talkie-btn {
+            width: 90%;
+            max-width: 400px;
+            padding: 25px;
+            background-color: #ff3131;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            box-shadow: 0 5px #990000;
+            position: absolute;
+            bottom: 30px;
+        }
+        .walkie-talkie-btn:active {
+            background-color: #cc0000;
+            box-shadow: 0 2px #660000;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="app-name">SockiiisBack-</div>
+    </div>
+
+    <div class="main-content">
+        <div class="job-title">YOUR ASSIGNED ROLE</div>
+        <div class="job-description">
+            Focus on your specific task. Your work supports 
+            our servicemen and women and our mission.
+        </div>
+    </div>
+
+    <button class="walkie-talkie-btn">HOLD TO TALK</button>
+
+</body>
+</html>
