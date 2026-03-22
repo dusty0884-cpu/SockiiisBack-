@@ -1,0 +1,37 @@
+<div id="job-timer-container" style="text-align: center; font-family: sans-serif; padding: 20px; border: 2px solid #000; display: inline-block;">
+    <h2 style="margin: 0;">JOB CLOCK</h2>
+    <div id="countdown-display" style="font-size: 48px; font-weight: bold; color: red;">00:00</div>
+    <button onclick="startJobTimer()" style="margin-top: 10px; padding: 10px 20px; cursor: pointer;">START JOB</button>
+</div>
+
+<script>
+let timerInterval;
+
+function startJobTimer() {
+    // Prompt the worker for the assigned minutes for the job
+    let totalMinutes = prompt("Enter assigned minutes for this job:", "30");
+    
+    if (totalMinutes == null || totalMinutes == "") return;
+
+    let timeInSeconds = parseInt(totalMinutes) * 60;
+    clearInterval(timerInterval);
+
+    timerInterval = setInterval(() => {
+        let minutes = Math.floor(timeInSeconds / 60);
+        let seconds = timeInSeconds % 60;
+
+        // Add leading zero to seconds
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+
+        document.getElementById('countdown-display').innerHTML = `${minutes}:${seconds}`;
+
+        if (timeInSeconds <= 0) {
+            clearInterval(timerInterval);
+            document.getElementById('countdown-display').innerHTML = "JOB EXPIRED";
+            alert("Time is up for this job!");
+        } else {
+            timeInSeconds--;
+        }
+    }, 1000);
+}
+</script>
