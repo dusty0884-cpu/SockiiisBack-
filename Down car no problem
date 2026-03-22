@@ -1,0 +1,12 @@
+// Roadside Assistance Picker
+function showRoadsideOptions() {
+  const currentHour = new Date().getHours();
+  
+  // Filters services active right now
+  const availableServices = allTowServices.filter(service => {
+    return currentHour >= service.open && currentHour <= service.close;
+  });
+
+  // Displays list to the user
+  displayList(availableServices);
+}
