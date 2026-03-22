@@ -1,0 +1,34 @@
+// --- TIME EXCHANGE & AUTO-SCHEDULE SYNC ---
+
+// 1. SCAN & TRADE FUNCTION
+function initiateTimeTrade(sellerId, buyerId, hours, rate) {
+    const totalCost = hours * rate;
+    
+    // Create the Trade Box data
+    const tradeData = {
+        from: sellerId,
+        to: buyerId,
+        amount: hours,
+        type: "Vacation/Sick",
+        price: totalCost,
+        status: "Confirmed",
+        timestamp: new Date().toISOString()
+    };
+
+    // 2. UPDATE BALANCES
+    updateUserBalance(sellerId, -hours);
+    updateUserBalance(buyerId, hours);
+
+    // 3. AUTO-UPDATE SCHEDULE
+    syncTradeToSchedule(tradeData);
+}
+
+// 4. AUTOMATIC SCHEDULE OVERRIDE
+function syncTradeToSchedule(trade) {
+    const schedule = db.collection('Schedules');
+    
+    // Swap the shift ownership instantly
+    schedule.doc(trade.from).update({ status: "Off-Time Sold" });
+    schedule.doc(trade.to).update({ status: "Active-Time Bought" });
+    
+    console
