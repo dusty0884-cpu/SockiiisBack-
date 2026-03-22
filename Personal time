@@ -1,0 +1,36 @@
+<div id="user-profile-private">
+  
+  <section class="profile-module" id="id-vault">
+    <h3>Personal Identification</h3>
+    <div class="id-entry">
+      <input type="text" placeholder="Full Legal Name">
+      <input type="text" placeholder="ID / License Number">
+      <input type="date" title="DOB">
+      <button class="upload-btn">Scan ID Card</button>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="profile-module" id="grocery-manager">
+    <h3>Daily & Weekly Essentials</h3>
+    <ul id="grocery-list"></ul>
+    <input type="text" id="new-item" placeholder="Add to list...">
+    <button onclick="addItem()">Add Item</button>
+  </section>
+
+  <hr>
+
+  <section class="profile-module" id="insurance-vault">
+    <h3>Vehicle & Personal Insurance</h3>
+    <div class="insurance-status">
+      <p><strong>Status:</strong> System Ready</p>
+      <button class="upload-btn">Upload Policy Card</button>
+    </div>
+    <div id="insurance-details">
+      <input type="text" placeholder="Provider Name">
+      <input type="text" placeholder="Policy Number">
+    </div>
+  </section>
+
+</div>
