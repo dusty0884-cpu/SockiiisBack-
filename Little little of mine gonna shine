@@ -1,0 +1,25 @@
+// Add a double-tap listener to the bottom utility bar
+const bottomBar = document.getElementById('bottom-screen-options');
+
+let lastTap = 0;
+bottomBar.addEventListener('touchstart', (e) => {
+    const currentTime = new Date().getTime();
+    const tapLength = currentTime - lastTap;
+    
+    if (tapLength < 300 && tapLength > 0) {
+        toggleFlashlight();
+        e.preventDefault();
+    }
+    lastTap = currentTime;
+});
+
+async function toggleFlashlight() {
+    const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
+    const track = stream.getVideoTracks()[0];
+    const capabilities = track.getCapabilities();
+    
+    if (capabilities.torch) {
+        const isOn = track.getSettings().torch;
+        await track.applyConstraints({ advanced: [{ torch: !isOn }] });
+    }
+}
