@@ -1,0 +1,54 @@
+import React, { useState, useEffect } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { Audio } from 'expo-av'; // For playing the chirp
+
+const TheHammerLobby = () => {
+  const [isTalking, setIsTalking] = useState(false);
+  const [chirp, setChirp] = useState();
+
+  // Load the chirp sound (You need a 'chirp.mp3' file in your assets)
+  async function playChirp() {
+    const { sound } = await Audio.Sound.createAsync(
+       require('./assets/boost_chirp.mp3')
+    );
+    setChirp(sound);
+    await sound.playAsync();
+  }
+
+  const handlePressIn = () => {
+    setIsTalking(true);
+    playChirp(); // Plays the chirp when you press to talk
+  };
+
+  return (
+    <View style={styles.container}>
+      {/* Permanent Need-to-Know Board */}
+      <View style={styles.bulletin}>
+        <Text style={styles.header}>NEED TO KNOW</Text>
+        <Text style={styles.info}>• Yard is full - hold incoming loads.</Text>
+        <Text style={styles.info}>• Check safety gear before entry.</Text>
+      </View>
+
+      {/* Chirp / Walkie-Talkie Button */}
+      <TouchableOpacity 
+        onPressIn={handlePressIn}
+        onPressOut={() => setIsTalking(false)}
+        style={[styles.micButton, isTalking && styles.activeMic]}
+      >
+        <Text style={styles.buttonText}>{isTalking ? "TALKING..." : "HOLD TO CHIRP"}</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: { flex: 1, padding: 20, justifyContent: 'center', backgroundColor: '#1a1a1a' },
+  bulletin: { backgroundColor: '#ffd700', padding: 15, borderRadius: 8, marginBottom: 40 },
+  header: { fontWeight: 'bold', fontSize: 20, color: '#000' },
+  info: { fontSize: 16, marginTop: 5, color: '#000' },
+  micButton: { backgroundColor: '#ff4500', height: 150, width: 150, borderRadius: 75, alignSelf: 'center', justifyContent: 'center', alignItems: 'center' },
+  activeMic: { backgroundColor: '#32cd32', transform: [{ scale: 1.1 }] },
+  buttonText: { color: '#fff', fontWeight: 'bold' }
+});
+
+export default TheHammerLobby;
