@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SockiiisBack</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            border: 2px solid #fff;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        h1 { font-size: 3rem; text-transform: uppercase; }
+        .splits {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .item {
+            background: #222;
+            padding: 15px;
+            border-left: 5px solid #00ff00;
+            font-weight: bold;
+        }
+        .mission {
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>SockiiisBack</h1>
+    
+    <div class="container">
+        <h2>The 7 Splits</h2>
+        <div class="splits">
+            <div class="item">Servicemen and Women</div>
+            <div class="item">Housing for Servicemen and Women</div>
+            <div class="item">Hospitals & VA Programs</div>
+            <div class="item">Starving Kids</div>
+            <div class="item">Orphans</div>
+            <div class="item">Children’s Education</div>
+            <div class="item">Disaster Relief</div>
+        </div>
+    </div>
+
+    <div class="mission">
+        <p>Direct Truth. Real Support. No Games.</p>
+    </div>
+
+</body>
+</html>
