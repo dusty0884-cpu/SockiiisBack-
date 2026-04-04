@@ -1,0 +1,17 @@
+​{
+"name": "sockiiisback-infrastructure",
+"version": "1.0.0",
+"description": "Digital infrastructure for service members and humanitarian relief",
+"main": "index.js",
+"scripts": {
+"start": "node index.js",
+"dev": "nodemon index.js",
+"build": "echo 'Building project...'"
+},
+"dependencies": {
+"express": "^4.18.2",
+"dotenv": "^16.0.3"
+},
+"author": "Dustin Ross Wysocki",
+"license": "ISC"
+}
