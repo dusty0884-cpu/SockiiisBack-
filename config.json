@@ -1,0 +1,12 @@
+"project_name": "SockiiisBack",
+"funding_model": "Self-funding",
+"support_splits": {
+"servicemen_and_women": "Active and Prior",
+"housing": "Servicemen and Women",
+"medical": "Hospitals and Programs",
+"youth_support": ["Starving Kids", "Orphans"],
+"education": "Children",
+"emergency_response": "Disaster Relief"
+},
+"compliance_status": "Internal Protocol",
+"deployment_timeline": "24 Hours"
