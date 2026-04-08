@@ -1,0 +1,11 @@
+
+  "splits": [
+    { "id": 1, "category": "Service Personnel", "percentage": 1 },
+    { "id": 2, "category": "Veteran Housing / VA Programs", "percentage": 1 },
+    { "id": 3, "category": "Sick Kids", "percentage": 1 },
+    { "id": 4, "category": "Starving Kids", "percentage": 1 },
+    { "id": 5, "category": "Orphans", "percentage": 1 },
+    { "id": 6, "category": "Disaster Relief", "percentage": 1 },
+    { "id": 7, "category": "Farmers", "percentage": 1 }
+  
+
