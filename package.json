@@ -1,4 +1,4 @@
-​{
+​
 "name": "sockiiisback-infrastructure",
 "version": "1.0.0",
 "description": "Digital infrastructure for service members and humanitarian relief",
@@ -14,4 +14,4 @@
 },
 "author": "Dustin Ross Wysocki",
 "license": "ISC"
-}
+
