@@ -22,5 +22,5 @@ jobs:
           git config --global user.name "AI-Architect"
           git config --global user.email "ai@github.com"
           git add .
-          git commit -m "AI fixed the gears to get your logic flowing" || exit 0
+          gitbiff --quite {}git commit -m "AI fixed the gears to get your logic flowing" || exit 0
           git push
