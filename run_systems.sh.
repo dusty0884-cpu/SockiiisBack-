@@ -1,0 +1,32 @@
+# SockiiisBack Integration Manifest
+# All-in-one configuration for repository deployment
+
+# 1. Environment Variables
+# Links the backend to the live database
+variables:
+  - DATABASE_URL: "INTEGRATION_PENDING"
+  - SYSTEM_SPLIT_LOGIC: "ACTIVE"
+
+# 2. Deployment Hooks
+# Triggers Vercel updates on every push
+hooks:
+  - target: "vercel-production"
+  - event: "push"
+
+# 3. Action Workflows
+# Automates the Integrity Loop and logistics audits
+workflows:
+  - name: "Logistics Audit"
+    run: "npm run audit --dry-side"
+  - name: "Funding Split Logic"
+    targets:
+      - "Servicemen and women"
+      - "Housing / Hospitals"
+      - "Starving Kids / Orphans"
+      - "Education / Disaster Relief"
+
+# 4. Vocational Hub Coordinator
+# Connects trade training to warehouse operations
+hubs:
+  - training: ["Welding", "Logistics"]
+  - placement: "Active Warehouse Network"
