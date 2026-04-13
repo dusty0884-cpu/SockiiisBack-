@@ -1,0 +1,22 @@
+name: Run Program
+on: [push]
+
+jobs:
+  run-task:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run script and catch errors
+        run: |
+          # This runs your program. 
+          # If it fails, it saves the error to error_log.txt and keeps going.
+          python your_script.py || echo "Error found" > error_log.txt
+          
+      - name: Save error file
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: error-reports
+          path: error_log.txt
