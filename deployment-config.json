@@ -1,0 +1,21 @@
+{
+  "project_name": "SockiiisBack",
+  "deployment_target": "Vercel",
+  "root_directory": "/",
+  "build_command": "npm run build",
+  "output_directory": ".next",
+  "environment_variables": {
+    "INTEGRITY_LOOP": "enabled",
+    "AUTO_CONSOLIDATION": "active",
+    "LOGISTICS_AUDIT": "true"
+  },
+  "funding_splits": {
+    "1": "Service Personnel Housing",
+    "2": "Servicemen and Women / VA Programs / VA Hospitals",
+    "3": "Sick Kids",
+    "4": "Starving Kids",
+    "5": "Orphans",
+    "6": "Children's Education",
+    "7": "Farmers"
+  }
+}
